@@ -20,7 +20,7 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
-          projectBaseDir: apps/auth-api/
+          projectBaseDir: nestjs-monorepo/apps/auth-api/
           
   sonarcloudScan2:
     name: SonarCloudScan2
@@ -34,4 +34,4 @@ jobs:
         env: 
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
-          projectBaseDir: apps/cats-api/
+          projectBaseDir: nestjs-monorepo/apps/cats-api/
