@@ -4,7 +4,7 @@ on:
       branches:
       - main
       paths:
-      - 'lambdas/test/**'
+      - 'nestjs-monorepo/apps/**'
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:
@@ -20,7 +20,7 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
-          projectBaseDir: nestjs-monorepo/apps/auth-api/
+          projectBaseDir: apps/auth-api/
           
   sonarcloudScan2:
     name: SonarCloudScan2
@@ -34,4 +34,4 @@ jobs:
         env: 
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
-          projectBaseDir: nestjs-monorepo/apps/cats-api/
+          projectBaseDir: apps/cats-api/
